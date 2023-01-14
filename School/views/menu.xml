@@ -1,0 +1,36 @@
+<odoo>
+    <data>
+        <menuitem
+                name="My School"
+                id="School.school_menu_root"/>
+        <menuitem
+                name="Student"
+                id="School.student_list"
+                parent="School.school_menu_root"
+                action="open_view_student_tree"/>
+
+        <menuitem
+                name="Teacher"
+                id="School.teacher_list"
+                parent="School.school_menu_root"
+                action="open_view_teacher_tree"/>
+
+        <menuitem
+                name="Section"
+                id="School.section_list"
+                parent="School.school_menu_root"
+                action="open_view_section_tree"/>
+
+        <menuitem
+                name="Course"
+                id="School.course_list"
+                parent="School.school_menu_root"
+                action="open_view_course_tree"/>
+
+        <menuitem
+                name="Registration"
+                id="School.registration_list"
+                parent="School.school_menu_root"
+                action="open_view_registration_tree"/>
+    </data>
+</odoo>

@@ -1,0 +1,59 @@
+<odoo>
+    <data>
+        <record model = "ir.ui.view" id="view_teacher_tree">
+            <field name = "name">Teacher List</field>
+            <field name = "model">school.teacher</field>
+            <field name = "arch" type="xml">
+                <tree string=" Teacher List">
+                    <field name="name"/>
+                    <field name="email"/>
+                    <field name="phone"/>
+                    <field name="gender"/>
+                    <field name="id_t"/>
+                </tree>
+            </field>
+        </record>
+
+         <record id="schoolteacher_form_view" model="ir.ui.view">
+            <field name="name">school.form.view</field>
+            <field name="model">school.teacher</field>
+            <field name="arch" type="xml">
+                <form>
+
+                    <sheet>
+
+                     <group>
+
+                          <h6 style="background-color:#71639e;">
+                        <field name="image" widget="image" class="oe_left oe_avatar"/>
+                              <field name="faculty" widget="image" class ="oe_right oe_avatar"/>
+                        <group>
+                              <field name="name"/>
+                              <field name="email"/>
+                              <field name="phone"/>
+                              <field name="gender"/>
+                              <field name="id_t"/>
+                         </group>
+                         </h6>
+                     </group>
+
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="open_view_teacher_tree" model="ir.actions.act_window">
+            <field name="name">Teacher</field>
+            <field name="res_model">school.teacher</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                 <p class="o_view_nocontent_smiling_face">
+                     No Record Found!
+                 </p>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>
